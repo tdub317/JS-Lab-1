@@ -2,14 +2,13 @@
 let userHealth = 40;
 let bossHealth = 10;
 let userWins = 0;
-let bossWins = 0;
 let userDmg = 0;
 let bossDmg = 0;
 let play = prompt("Do you want to play a game?");
 
 if (play.toUpperCase() === "YES") {
     let userName = prompt("Please name your character");
-    while (userWins <= 3 && bossWins <= 1) {
+    while (userWins <= 3) {
         userDmg = Math.floor(Math.random() * 2) + 1;
         bossDmg = Math.floor(Math.random() * 2) + 1;
         if (bossHealth <= 0) {
@@ -17,7 +16,7 @@ if (play.toUpperCase() === "YES") {
             bossHealth = 10;
             // console.log(`WIN COUNTER: ${userWins}`);
         } else if (userHealth <= 0) {
-            console.log(`${userName} HAS BEEN DEFEATED. GRANT WINS! GAME OVER.`);
+            console.log(`${userName} HAS BEEN DEFEATED. THE ALMIGHTY GRANT WINS! GAME OVER.`);
             break;
         } else if (userWins === 3) {
             console.log(`${userName} WINS! GAME OVER.`);
